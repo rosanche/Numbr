@@ -1,0 +1,178 @@
+$font: 'Ubuntu';
+$color-blue: #4A90E2;
+
+.filter {
+    background-color: $color-blue;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.14);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 125px;
+    //padding: 10px 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s ease;
+    //outline: none;
+    height: 50px;
+   
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        transition: .5s ease;
+        outline: none;
+        background: none;
+        border: none;
+
+        .title-name {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            padding-left: 5px;
+            padding-bottom: 2px;
+        }
+    }
+
+    .options {
+        width: 290px;
+        height: 0px;
+        background-color: white;
+        transition: .5s ease;
+        font-size: 14px;
+
+        .date, .segment, .fournisseur {
+            display: flex;
+            padding: 15px 0px 0px 10px;
+            font-weight: 600;
+
+            .arrow {
+                width: .75rem;
+                height: .75rem;
+                display: inline-block;
+                position: relative;
+                margin-top: 1px;
+                margin-left: 3px;
+                //margin: 0 1rem;
+
+                span {
+                    top: .5rem;
+                    position: absolute;
+                    width: .487rem;
+                    height: .1rem;
+                    background-color: #4A90E2;
+                    display: inline-block;
+                    transition: all .2s ease;
+
+                    &:first-of-type {
+                        left: 0;
+                        transform: rotate(45deg);
+                    }
+
+                    &:last-of-type {
+                        right: 0;
+                        transform: rotate(-45deg)
+                    }
+                }
+                
+
+                &.active {
+
+                    span {
+                        &:first-of-type {
+                            transform: rotate(-45deg);
+                        }
+
+                        &:last-of-type {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            .blue-title {
+                font-weight: 600;
+                color: #4A90E2;
+            }
+
+            .input-date {
+                border: 1px solid #979797;
+                border-radius: 5px;
+                font-size: 12px;
+                width: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 4px;
+
+                .input-style-month {
+                    font-size: 12px;
+                    border: none;
+                    max-width: 20px;
+                    outline: none;
+                    padding: 0 2px; 
+                }
+
+                .input-style {
+                    font-size: 12px;
+                    border: none;
+                    max-width: 32px;
+                    outline: none;
+                    padding: 0 2px;
+                }
+            }
+
+            .input {
+                border: 1px solid #979797;
+                border-radius: 5px;
+                font-size: 12px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 4px;
+
+                .input-style-month {
+                    font-size: 12px;
+                    border: none;
+                    max-width: 20px;
+                    outline: none;
+                    padding: 0 2px; 
+                }
+
+                .input-style {
+                    font-size: 12px;
+                    border: none;
+                    max-width: 32px;
+                    outline: none;
+                    padding: 0 2px;
+                }
+            }
+        }
+    }
+}
+
+.clicked {
+    width: 290px;
+    height: 325px;
+    outline: none;
+
+    .options {
+        height: 360px;
+        width: 290px;
+    }
+
+    /*.date {
+
+        .input-date {
+            border: 1px solid #D8D8D8;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    }*/
+}
+

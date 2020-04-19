@@ -1,0 +1,988 @@
+$font: 'Ubuntu';
+$transition: .6s;
+
+//@import 'https://fonts.googleapis.com/css?family=Lato';
+
+.products-sales {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    
+    .title-back {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 65px;
+        width: 100%;
+
+        .icon-back {
+            height: 23px;
+            position: absolute;
+            left: 6px;
+            top: 8px;
+        }
+
+        .title {
+            //position: -webkit-sticky;
+            //position: sticky;
+            top: 20px;
+            align-self: center;
+            font-family: $font;
+            font-weight: 600;
+            color: white;
+            font-size: 30px;
+            //margin: 25px 0 10px 0px;
+        }
+    }
+
+    .cases {
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        border-collapse: collapse;
+        width: 99%;
+        border-radius: 10px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 4px 4px 12px 7px rgba($color: #000000, $alpha: 0.20);
+        position: relative;
+        color: #4A4A4A;
+        position: fixed;
+        top: 105px;
+
+        /*.case:hover {
+            box-shadow: 4px 4px 12px 15px rgba($color: #000000, $alpha: 0.20);
+            //margin-top: -3px;
+        } A changer et corrigger*/
+
+        .case-product {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transition: $transition;
+
+            .title-information-products {
+                border-collapse: collapse;
+                width: 100%;
+                height: 50px;
+                position: -webkit-sticky;
+                position: sticky;
+                //top: 10px;
+                background-color: #4A90E2;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-align: initial;
+                font-family: $font !important;
+                font-size: 15px !important;
+                color: white !important;
+                font-weight: 600;
+                box-shadow: 0 4px 10px 4px rgba($color: #000000, $alpha: 0.08);
+
+                .date {
+                    padding-left: 9px;
+                    width: 4.5%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sous-segment {
+                    width: 10%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sale-title {
+                    width: 25%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .id-product {
+                    width: 5.5%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .name-product {
+                    width: 19.5%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .reference {
+                    width: 5%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+                    
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fournisseur {
+                    width: 8%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .amount-products {
+                    width: 5.5%;
+                    text-align: initial;
+                    
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .income-ht {
+                    width: 6%;
+                    text-align: initial;
+                    
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cost-ht {
+                    width: 5%;
+                    text-align: initial;
+                    
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .margin {
+                    width: 5%;
+                    text-align: initial;
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+                        //margin: 0 1rem;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .price-buy {
+                    width: 2.5%;
+                    padding-right: 9px;
+                    text-align: initial;
+                    
+                    font-family: $font !important;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 600;
+
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .arrow {
+                        width: .75rem;
+                        height: .75rem;
+                        display: inline-block;
+                        position: relative;
+
+                        span {
+                            top: .5rem;
+                            position: absolute;
+                            width: .487rem;
+                            height: .1rem;
+                            background-color: #efefef;
+                            display: inline-block;
+                            transition: all .2s ease;
+
+                            &:first-of-type {
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            &:last-of-type {
+                                right: 0;
+                                transform: rotate(-45deg)
+                            }
+                        }
+                        
+
+                        &.active {
+
+                            span {
+                                &:first-of-type {
+                                    transform: rotate(-45deg);
+                                }
+
+                                &:last-of-type {
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .loading-spinner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0px 25px;
+                color: #4A90E2;
+            }
+            
+            .ligns {
+                background-color: white;
+                height: 84vh;
+                overflow-y: auto;
+                transition: height .2s;
+
+                .first-lign {
+                    font-family: $font;
+                    font-size: 12px;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 20px;
+                    padding-bottom: 17.5px;
+
+                    &:last-of-type {
+                        padding-bottom: 30px;
+                    }
+
+                    .date {
+                        padding-left: 9px;
+                        width: 4.5%;
+                        text-align: initial;
+                    }
+
+                    .sous-segment {
+                        width: 10%;
+                        text-align: initial;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .sale-title {
+                        width: 25%;
+                        text-align: initial;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .id-product {
+                        width: 5.5%;
+                        text-align: initial;
+                    }
+
+                    .name-product {
+                        width: 19.5%;
+                        text-align: initial;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .reference {
+                        width: 5%;
+                        text-align: initial;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .fournisseur {
+                        width: 8%;
+                        text-align: initial;
+                    }
+
+                    .amount-products {
+                        width: 5.5%;
+                        text-align: initial;
+                        font-weight: 600;
+                    }
+
+                    .income-ht {
+                        width: 6%;
+                        text-align: initial;
+                        font-weight: 600;
+                    }
+
+                    .cost-ht {
+                        width: 5%;
+                        text-align: initial;
+                        font-weight: 600;
+                    }
+
+                    .margin {
+                        width: 5%;
+                        text-align: initial;
+                        font-weight: 600;
+                    }
+
+                    .price-buy {
+                        width: 2.5%;
+                        padding-right: 9px;
+                        text-align: initial;
+                        font-weight: 600;
+                    }
+                }
+
+                .separation {
+                    width: 92%;
+                    height: 1px;
+                    background-color: #979797;
+                    align-self: center;
+                }
+            }
+        }
+
+        .case-sales {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            transition: $transition;
+            background-color: white;
+
+            .title-information-sales {
+                border-collapse: collapse;
+                width: 100.2%;
+                height: 50px;
+                position: relative;
+                top: -2px;
+                left: -2px;
+                background-color: #4A90E2;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-align: initial;
+                font-family: $font;
+                font-size: 15px;
+                color: white;
+                font-weight: 600;
+                box-shadow: 0 4px 10px 4px rgba($color: #000000, $alpha: 0.08);
+
+                .date {
+                    padding-left: 9px;
+                    width: 4.5%;
+                    text-align: initial;
+                }
+
+                .sous-segment {
+                    width: 30%;
+                    text-align: initial;
+                }
+
+                .sale-title {
+                    width: 50%;
+                    text-align: initial;
+                }
+
+                .amount-sales {
+                    width: 5.5%;
+                    text-align: initial;
+                }
+
+                .income-ht {
+                    width: 6%;
+                    text-align: initial;
+                }
+
+                .cost-ht {
+                    width: 5%;
+                    text-align: initial;
+                }
+
+                .margin {
+                    width: 5%;
+                    text-align: initial;
+                }
+
+                .price-buy {
+                    width: 2.5%;
+                    padding-right: 9px;
+                    text-align: initial;
+                }
+            }
+
+            .first-lign {
+                font-family: $font;
+                font-size: 12px;
+                display: flex;
+                flex-direction: row;
+                padding-top: 20px;
+                padding-bottom: 17.5px;
+
+                &:last-of-type {
+                    padding-bottom: 30px;
+                }
+
+                .date {
+                    padding-left: 9px;
+                    width: 4.5%;
+                    text-align: initial;
+                }
+
+                .sous-segment {
+                    width: 30%;
+                    text-align: initial;
+                }
+
+                .sale-title {
+                    width: 50%;
+                    text-align: initial;
+                }
+
+                .amount-sales{
+                    width: 5.5%;
+                    text-align: initial;
+                    font-weight: 600;
+                }
+
+                .income-ht {
+                    width: 6%;
+                    text-align: initial;
+                    font-weight: 600;
+                }
+
+                .cost-ht {
+                    width: 5%;
+                    text-align: initial;
+                    font-weight: 600;
+                }
+
+                .margin {
+                    width: 5%;
+                    text-align: initial;
+                    font-weight: 600;
+                }
+
+                .price-buy {
+                    width: 2.5%;
+                    padding-right: 9px;
+                    text-align: initial;
+                    font-weight: 600;
+                }
+            }
+
+            .separation {
+                width: 92%;
+                height: 1px;
+                background-color: #979797;
+                align-self: center;
+            }
+        }
+    }
+}

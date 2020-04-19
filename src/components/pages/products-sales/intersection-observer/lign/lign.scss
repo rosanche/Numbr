@@ -1,0 +1,102 @@
+$font: 'Ubuntu';
+
+.lign-sep {
+    .lign {
+        font-family: $font;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 17.5px;
+
+        &:last-of-type {
+            padding-bottom: 30px;
+        }
+
+        .date {
+            padding-left: 9px;
+            width: 4.5%;
+            text-align: initial;
+        }
+
+        .sous-segment {
+            width: 10%;
+            text-align: initial;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sale-title {
+            width: 25%;
+            text-align: initial;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .id-product {
+            width: 5.5%;
+            text-align: initial;
+        }
+
+        .name-product {
+            width: 19.5%;
+            text-align: initial;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .reference {
+            width: 5%;
+            text-align: initial;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .fournisseur {
+            width: 8%;
+            text-align: initial;
+        }
+
+        .amount-products {
+            width: 5.5%;
+            text-align: initial;
+            font-weight: 600;
+        }
+
+        .income-ht {
+            width: 6%;
+            text-align: initial;
+            font-weight: 600;
+        }
+
+        .cost-ht {
+            width: 5%;
+            text-align: initial;
+            font-weight: 600;
+        }
+
+        .margin {
+            width: 5%;
+            text-align: initial;
+            font-weight: 600;
+        }
+
+        .price-buy {
+            width: 2.5%;
+            padding-right: 9px;
+            text-align: initial;
+            font-weight: 600;
+        }
+    }
+
+    .separation {
+        width: 92%;
+        height: 1px;
+        background-color: #979797;
+        align-self: center;
+    }
+}
