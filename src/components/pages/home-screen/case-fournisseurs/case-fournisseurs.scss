@@ -1,0 +1,116 @@
+$font: 'Ubuntu';
+
+.case-fournisseurs {
+    display: flex;
+    flex-direction: column;
+    width: 56.7%;
+    margin-left: 20px;
+
+    .title {
+        align-self: flex-start;
+        font-family: $font;
+        font-weight: 600;
+        color: white;
+        font-size: 30px;
+        margin: 0px 0 7px 12px;
+    }
+
+    .case {
+        border-collapse: collapse;
+        border-radius: 10px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 4px 4px 12px 7px rgba($color: #000000, $alpha: 0.20);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+
+        .title-information-fournisseurs {
+            border-collapse: collapse;
+            width: 100%;
+            height: 50px;
+            background-color: #4A90E2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: initial;
+            font-family: $font;
+            font-size: 15px;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 10px 4px rgba($color: #000000, $alpha: 0.08);
+
+            .fournisseur {
+                padding-left: 9px;
+                width: 55%;
+                text-align: initial;
+            }
+
+            .year1 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .year2 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .year3 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .total {
+                width: 11%;
+                text-align: initial;
+            }
+        }
+
+        .lign {
+            font-family: $font;
+            font-size: 12px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 20px;
+            padding-bottom: 17.5px;
+
+            .sous-segment {
+                padding-left: 9px;
+                width: 55%;
+                text-align: initial;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .year1 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .year2 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .year3 {
+                width: 11%;
+                text-align: initial;
+            }
+
+            .total {
+                width: 11%;
+                text-align: initial;
+            }
+        }
+
+        .separation {
+            width: 92%;
+            height: 1px;
+            background-color: #979797;
+            align-self: center;
+        }
+    }
+}

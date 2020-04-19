@@ -4,7 +4,7 @@ import SubmitFormBase from './submit-form/submit-form';
 import { withRouter } from 'react-router-dom';
 import { WithFirebase } from '../../Firebase';
 import { compose } from 'recompose';
-import { withAuthorization } from '../../session';
+import { alreadySigned } from '../../session';
 
 import './connection-screen.scss';
 
@@ -29,4 +29,6 @@ const SubmitForm = compose(
 
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(ConnectScreen);
+export default alreadySigned(condition)(ConnectScreen);
+
+//export default ConnectScreen;

@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
-import { ReactComponent as Suggestion } from '../../../images/suggestion.svg';
-import { ReactComponent as Search } from '../../../images/search.svg';
-import CaseProducts from './case-products/case-products.js';
-import { withAuthorization } from '../../session';
 
-import SignOutButton from './signout-button/signout-button.js'
+//import { ReactComponent as Suggestion } from '../../../images/suggestion.svg';
+//import { ReactComponent as Search } from '../../../images/search.svg';
+
+import CaseProducts from './case-products/case-products.js';
+import CaseSegments from './case-segments/case-segments.js';
+import CaseFournisseurs from './case-fournisseurs/case-fournisseurs.js';
+
+import { withAuthorization } from '../../session';
+import { withRouter } from 'react-router-dom';
+import { WithFirebase } from '../../Firebase';
+import { compose } from 'recompose';
+
+//import SignOutButton from './signout-button/signout-button.js'
 
 import './home-screen.scss';
 
-class HomeScreen extends Component {
+class HomeScreenCompo extends Component {
     
     state = { datas: '' }
 
-    /*componentDidMount = () => {
-        const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-        const url = 'http://interditap.sharepoint.com/_vti_bin/ExcelRest.aspx/Marketing';
-
-        fetch(proxyurl + url) 
-        .then((resp)=> { return resp.json() })
-        .then((datas)=> { 
-            this.setState({datas: datas});
-            console.log(datas);
-        })
-    } */
-    
     render() {
+
+        //console.log('compo : ' + this.props);
+
         return (
             <div className='home-screen'>
-                <div className='footer'>
+                {/*<div className='footer'>
                     <div className='search-bar'>
                         <Search className='icon' />
                         <input 
@@ -42,13 +41,21 @@ class HomeScreen extends Component {
                         <Suggestion className='icon' />
                     </div>
                     <SignOutButton />
+                </div>*/}
+                <CaseProducts {...this.props} products_on={this.props.products_on} updateDatas={this.props.updateDatas} />
+                <div className='case-row'>
+                    <CaseSegments {...this.props} />
+                    <CaseFournisseurs {...this.props} />
                 </div>
-                <CaseProducts />
-                <div className='circle' />
             </div>
         );
     }
 }
+
+const HomeScreen = compose(
+    withRouter,
+    WithFirebase
+) (HomeScreenCompo)
 
 const condition = authUser => !!authUser;
 
